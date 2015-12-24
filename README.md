@@ -20,3 +20,28 @@ $ sudo pecl install xdebug
 	xdebug.remote_enable=on
 1. Apacheの再起動  
 $ sudo service apache2 restart
+1. 参考  
+<a href="http://www.atmarkit.co.jp/ait/articles/1103/31/news106.html" target="_blank">PECLのXDebugでデバッグを簡単に(前編)</a>  
+<a href="http://www.atmarkit.co.jp/ait/articles/1105/25/news125.html" target="_blank">PECLのXDebugでデバッグを簡単に(後編)</a>  
+
+
+## HTML\_Template_Flexyのインストール
+
+1. sudo pear install HTML\_Template_Flexy
+
+## Apacheのドキュメントルートの設定変更
+
+1.  sudo vi /etc/apache2/sites-available/000-default.conf
+1. 以下のように変更  
+\#DocumentRoot /var/www/html (旧)  
+DocumentRoot /home/yamauchi/www (新)  
+(「yamauchi」の部分は各自のログインユーザ)
+1. 以下の追加(```</VirtualHost>```より前に追加)  
+```
+<Directory /home/yamauchi/www/>
+	Options Indexes FollowSymLinks
+	AllowOverride FileInfo
+	Require all granted
+</Directory>
+```
+
