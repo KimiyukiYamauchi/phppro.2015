@@ -45,3 +45,6 @@ DocumentRoot /home/yamauchi/www (新)
 </Directory>
 ```
 
+## 関連リンク
+
+- <a href="http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html" target="_blank">郵便番号データダウンロード</a>
