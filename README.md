@@ -45,6 +45,21 @@ DocumentRoot /home/yamauchi/www (新)
 </Directory>
 ```
 
+## CakePHP 3.xインストール
+
+1. icuのインストール  
+$ sudo aptitude install libicu-dev
+1. intl拡張モジュールのインストール  
+$ sudo pecl install intl  
+or  
+$ sudo aptitude install php5-intl
+1. curlのインストール  
+$ sudo aptitude install curl
+
 ## 関連リンク
 
 - <a href="http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html" target="_blank">郵便番号データダウンロード</a>
+- <a href="https://github.com/cakephp/cakephp/tags" target="_blank">CakePHP ダウンロード</a>
+- <a href="http://book.cakephp.org/3.0/ja/installation.html" target="_blank">CakePHP 3.xのインストール手順</a>
+- <a href="http://qiita.com/ysnsyks2/items/176cfddbdf1f79d65a75" target="_blank">CakePHP3.0をインストールしてみる(自分用めもめも</a>
+- <a href="http://jquery.com/download/" target="_blank">jQueryダウンロード</a>
