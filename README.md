@@ -49,7 +49,7 @@ DocumentRoot /home/yamauchi/www (新)
 
 ## MySQLでインポート/エクスポート(CSV)するための権限付与
 
-mysql> grant file on *.* to ユーザ名@localhost;
+mysql> grant file on \*.\* to ユーザ名@localhost;
 
 
 ## CakePHP 3.xインストール
