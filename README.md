@@ -18,8 +18,9 @@ $ sudo pecl install xdebug
 	1. 以下を追加  
 	zend_extension=/usr/lib/php5/20131226/xdebug.so  
 	xdebug.remote_enable=on  
-	xdebug.remote_host=192.168.33.1  
-$ sudo service apache2 restart
+	xdebug.remote_host=192.168.33.1
+	1. Apache再起動  
+	$ sudo service apache2 restart
 1. 参考  
 <a href="http://www.atmarkit.co.jp/ait/articles/1103/31/news106.html" target="_blank">PECLのXDebugでデバッグを簡単に(前編)</a>  
 <a href="http://www.atmarkit.co.jp/ait/articles/1105/25/news125.html" target="_blank">PECLのXDebugでデバッグを簡単に(後編)</a>  
@@ -44,6 +45,9 @@ DocumentRoot /home/yamauchi/www (新)
 	Require all granted
 </Directory>
 ```
+4. Apache再起動  
+$ sudo service apache2 restart
+
 
 ## CakePHP 3.xインストール
 
