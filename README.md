@@ -37,7 +37,7 @@ $ sudo pecl install xdebug
 \#DocumentRoot /var/www/html (旧)  
 DocumentRoot /home/yamauchi/www (新)  
 (「yamauchi」の部分は各自のログインユーザ)
-1. 以下の追加(```</VirtualHost>```より前に追加)  
+1. 以下の追加(```</VirtualHost>```より前に追加)
 ```
 <Directory /home/yamauchi/www/>
 	Options Indexes FollowSymLinks
@@ -45,8 +45,11 @@ DocumentRoot /home/yamauchi/www (新)
 	Require all granted
 </Directory>
 ```
-4. Apache再起動  
-$ sudo service apache2 restart
+で、Apache再起動
+
+## MySQLでインポート/エクスポート(CSV)するための権限付与
+
+mysql> grant file on *.* to ユーザ名@localhost;
 
 
 ## CakePHP 3.xインストール
