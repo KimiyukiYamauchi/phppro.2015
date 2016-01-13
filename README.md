@@ -17,8 +17,8 @@ $ sudo pecl install xdebug
 	1. sudo vi /etc/php5/apache2/php.ini
 	1. 以下を追加  
 	zend_extension=/usr/lib/php5/20131226/xdebug.so  
-	xdebug.remote_enable=on
-1. Apacheの再起動  
+	xdebug.remote_enable=on  
+	xdebug.remote_host=192.168.33.1  
 $ sudo service apache2 restart
 1. 参考  
 <a href="http://www.atmarkit.co.jp/ait/articles/1103/31/news106.html" target="_blank">PECLのXDebugでデバッグを簡単に(前編)</a>  
