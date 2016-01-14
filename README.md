@@ -47,6 +47,10 @@ DocumentRoot /home/yamauchi/www (新)
 ```
 で、Apache再起動
 
+## 郵便番号データの変換(文字コード/改行コード)
+
+$ nkf -w -Lu --overwrite KEN_ALL.CSV
+
 ## MySQLでインポート/エクスポート(CSV)するための権限付与
 
 mysql> grant file on \*.\* to ユーザ名@localhost;
