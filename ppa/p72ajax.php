@@ -23,7 +23,7 @@ if($pref < 1 || $pref > 47 || $city < 0 || $city > 999){
 }
 
 //	MySQLに接続する
-$dbh = @new mysqli(	'localhost', 'ppguest', 'GGGGGGGGGG', 'ppdb');
+$dbh = @new mysqli(	'localhost', 'ppguest', '1234', 'ppdb');
 if($dbh->connect_errno){
 	die(json_encode($rows));
 }
