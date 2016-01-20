@@ -6,7 +6,7 @@ $dobj = new stdClass();
 $dobj->member = false;
 
 //	0: 非会員	1: 会員
-$kaiin = 0;
+$kaiin = 1;
 if($kaiin === 1){
 	$dobj->member = true;
 }

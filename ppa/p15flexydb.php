@@ -33,7 +33,8 @@ class CcData {
 		try {
 			$sql  = 'SELECT zipcode, pref, city, town FROM zipcodes';
 			$sql .= ' WHERE zipcode >= ? AND zipcode <= ?';
-			$sql .= ' ORDER BY zipcode ASC LIMIT 100';
+			//$sql .= ' ORDER BY zipcode ASC LIMIT 100';
+			$sql .= ' ORDER BY zipcode ASC';
 
 			//	郵便番号の検索範囲
 			$mincd = '2070000';
