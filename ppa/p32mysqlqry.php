@@ -7,7 +7,7 @@ if($dbh->connect_errno){
 }
 
 $dbh->set_charset('utf8mb4');	//	MySQL5.5未満では'utf8'
-$sql = 'SELECT COUNT(*) FROM zipcodes';
+$sql = "SELECT COUNT(*) FROM zipcodes where pref = '沖縄県'";
 if($result = $dbh->query($sql)){
 	$row = $result->fetch_row();
 	$cnt = $row[0];

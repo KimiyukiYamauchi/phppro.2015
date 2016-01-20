@@ -14,16 +14,20 @@ if($dbh->connect_errno){
 $dbh->set_charset('utf8mb4');
 
 $sql  = 'SELECT zipcode, pref, city, town FROM zipcodes';
-$sql .= ' WHERE zipcode >= ? AND zipcode <= ?';
-$sql .= ' ORDER BY zipcode ASC LIMIT 100';
+//$sql .= ' WHERE zipcode >= ? AND zipcode <= ?';
+$sql .= ' WHERE pref = ?';
+//$sql .= ' ORDER BY zipcode ASC LIMIT 100';
+$sql .= ' ORDER BY zipcode';
 
 //	郵便番号の検索範囲
 $mincd = '2070000';
 $maxcd = '2090000';
+$ken = '沖縄県';
 
 $sth = $dbh->stmt_init();
 if($sth->prepare($sql)){
-	$sth->bind_param('ss', $mincd, $maxcd);
+	//$sth->bind_param('ss', $mincd, $maxcd);
+	$sth->bind_param('s', $ken);
 	$sth->execute();
 	$sth->bind_result($code, $pref, $city, $town);
 
