@@ -17,9 +17,10 @@ $ sudo pecl install xdebug
 	1. sudo vi /etc/php5/apache2/php.ini
 	1. 以下を追加  
 	zend_extension=/usr/lib/php5/20131226/xdebug.so  
-	xdebug.remote_enable=on
-1. Apacheの再起動  
-$ sudo service apache2 restart
+	xdebug.remote_enable=on  
+	xdebug.remote_host=192.168.33.1
+	1. Apache再起動  
+	$ sudo service apache2 restart
 1. 参考  
 <a href="http://www.atmarkit.co.jp/ait/articles/1103/31/news106.html" target="_blank">PECLのXDebugでデバッグを簡単に(前編)</a>  
 <a href="http://www.atmarkit.co.jp/ait/articles/1105/25/news125.html" target="_blank">PECLのXDebugでデバッグを簡単に(後編)</a>  
@@ -36,7 +37,7 @@ $ sudo service apache2 restart
 \#DocumentRoot /var/www/html (旧)  
 DocumentRoot /home/yamauchi/www (新)  
 (「yamauchi」の部分は各自のログインユーザ)
-1. 以下の追加(```</VirtualHost>```より前に追加)  
+1. 以下の追加(```</VirtualHost>```より前に追加)
 ```
 <Directory /home/yamauchi/www/>
 	Options Indexes FollowSymLinks
@@ -44,6 +45,16 @@ DocumentRoot /home/yamauchi/www (新)
 	Require all granted
 </Directory>
 ```
+で、Apache再起動
+
+## 郵便番号データの変換(文字コード/改行コード)
+
+$ nkf -w -Lu --overwrite KEN_ALL.CSV
+
+## MySQLでインポート/エクスポート(CSV)するための権限付与
+
+mysql> grant file on \*.\* to ユーザ名@localhost;
+
 
 ## CakePHP 3.xインストール
 
