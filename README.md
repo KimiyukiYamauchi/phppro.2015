@@ -64,6 +64,11 @@ $ sudo aptitude install libicu-dev
 $ sudo pecl install intl  
 or  
 $ sudo aptitude install php5-intl
+1. intl拡張モジュールの組み込み  
+$ sudo vi /etc/php5/apache2/php.ini  
+::: 以下を追加 :::  
+extension=intl.so  
+::: 以上を追加 :::  
 1. curlのインストール  
 $ sudo aptitude install curl
 1. あとは以下の関連リンクの手順に従ってインストール
