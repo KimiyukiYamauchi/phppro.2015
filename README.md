@@ -58,6 +58,9 @@ mysql> grant file on \*.\* to ユーザ名@localhost;
 
 ## CakePHP 3.xインストール
 
+1. システムの更新  
+$ sudo aptitude update  
+$ sudo aptitude upgrade
 1. icuのインストール  
 $ sudo aptitude install libicu-dev
 1. intl拡張モジュールのインストール  
