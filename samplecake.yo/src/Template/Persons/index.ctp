@@ -20,3 +20,8 @@
 <tbody>
 </tbody>
 </table>
+<?= $this->Paginator->first('<<first'); ?>
+<?= $this->Paginator->prev('<prev'); ?>
+<?= $this->Paginator->numbers(); ?>
+<?= $this->Paginator->next('next>'); ?>
+<?= $this->Paginator->last('last>>'); ?>

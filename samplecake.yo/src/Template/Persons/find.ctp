@@ -19,10 +19,10 @@
     <tbody>
     <?php foreach ($persons as $person): ?>
         <tr>
-            <td><?= h($person->id) ?></td>
-            <td><?= h($person->name) ?></td>
-            <td><?= h($person->age) ?></td>
-            <td><?= h($person->mail) ?></td>
+					<td><?= h($person[0]) ?></td>
+					<td><?= h($person[1]) ?></td>
+					<td><?= h($person[2]) ?></td>
+					<td><?= h($person[3]) ?></td>
         </tr>
             <?php endforeach; ?>
             </tbody>
