@@ -3,6 +3,7 @@ namespace App\Controller;
  
 use App\Controller\AppController;
 use Cake\Datasource\ConnectionManager;
+use Cake\Validation\Validator;
  
 class PersonsController extends AppController{
 
@@ -26,11 +27,24 @@ class PersonsController extends AppController{
 	 
 	public function add()
 	{
+		$person = $this->Persons->newEntity();
+		$this->set('person', $person);
 		if ($this->request->is('post')) {
-			$person = $this->Persons->newEntity();
-			$person = $this->Persons->patchEntity($person, $this->request->data);
-			if ($this->Persons->save($person)) {
-				return $this->redirect(['action' => 'index']);
+			$validator = new Validator();
+			$validator->add(
+									'age','comparison',['rule' =>['comparison','>',20]]
+								);
+			$errors = $validator->errors($this->request->data);
+			if (!empty($errors)){
+					$this->Flash->error('comparison error');
+			} else {
+				$person = $this->Persons->patchEntity($person, $this->request->data);
+				if ($this->Persons->save($person)) {
+					return $this->redirect(['action' => 'index']);
+				}
+			}
+			if ($person->errors()){
+				$this->Flash->error('please check entered values...');
 			}
 		}
 	}
