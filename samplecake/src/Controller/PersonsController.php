@@ -2,6 +2,7 @@
 namespace App\Controller;
  
 use App\Controller\AppController;
+use Cake\Datasource\ConnectionManager;
  
 class PersonsController extends AppController{
 	 
@@ -64,7 +65,40 @@ class PersonsController extends AppController{
 											->order(['name' =>'Asc'])
 											->where(["name like " => '%' . $find . '%']);
  */
-			$persons = $this->Persons->findByName($find);
+//			$persons = $this->Persons->findByName($find);
+			/*
+			$first = $this->Persons->find()
+				            ->where(["name like " => '%' . $find . '%'])
+										->first();
+			$count = $last = $this->Persons->find()
+								            ->where(["name like " => '%' . $find . '%'])
+														->count();
+			$last = $this->Persons->find()
+								            ->offset($count - 1)
+														->where(["name like " => '%' . $find . '%'])
+														->first();
+			$persons = $this->Persons->find()
+								            ->where(["name like " => '%' . $find . '%']);
+			$msg = 'FIRST: "' . $first->name . '", LAST: "' . $last->name . '". (' . $count . ')';
+			$this->set('msg', $msg);
+			$persons = $this->Persons->find()
+				            ->where(["name like " => '%' . $find . '%'])
+										->andWhere(["mail like " => '%' . $find . '%']);
+			$query = $this->Persons->find();
+			$exp = $query->newExpr();
+			$fnc = function($exp, $f) {
+							//			return $exp->gte('age', $find * 1);
+									return $exp
+													->isNotNull('name')
+													->isNotNull('mail')
+													->gt('age',0)
+													->in('name', explode(',',$f));
+							};
+			$persons = $query->where($fnc($exp,$find));
+			 */
+			$connection = ConnectionManager::get('default');
+			$query = 'select * from persons where ' . $find;
+			$persons = $connection->query($query)->fetchAll('assoc');
 		}    
 		$this->set('persons', $persons);
 	}
