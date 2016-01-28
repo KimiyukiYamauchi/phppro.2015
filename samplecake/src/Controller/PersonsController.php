@@ -5,6 +5,24 @@ use App\Controller\AppController;
 use Cake\Datasource\ConnectionManager;
  
 class PersonsController extends AppController{
+
+	public $paginate = [
+						'limit' => 5,
+						'order' => [
+													'Persons.name' => 'asc'
+											]
+										];
+
+	public $helpers = [
+		    'Paginator' => ['templates' => 
+												'paginator-templates']
+										];
+
+	public function initialize()
+	{
+		parent::initialize();
+		$this->loadComponent('Paginator');
+	}
 	 
 	public function add()
 	{
@@ -19,7 +37,8 @@ class PersonsController extends AppController{
 
 	public function index()
 	{
-		$this->set('persons', $this->Persons->find('all'));
+		//$this->set('persons', $this->Persons->find('all'));
+		$this->set('persons', $this->paginate());
 	}
 
 	public function edit($id = null)
