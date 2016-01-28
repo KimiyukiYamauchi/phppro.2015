@@ -81,6 +81,7 @@ $ sudo aptitude install curl
 - <a href="http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html" target="_blank">郵便番号データダウンロード</a>
 - <a href="https://github.com/cakephp/cakephp/tags" target="_blank">CakePHP ダウンロード</a>
 - <a href="http://book.cakephp.org/3.0/ja/installation.html" target="_blank">CakePHP 3.xのインストール手順</a>
+- <a href="http://book.cakephp.org/3.0/ja/orm/database-basics.html" target="_blank">CakePHP 3.x データベースの基本</a>
 - <a href="http://qiita.com/ysnsyks2/items/176cfddbdf1f79d65a75" target="_blank">CakePHP3.0をインストールしてみる(自分用めもめも</a>
 - <a href="http://libro.tuyano.com/index2?id=4536003" target="_blank">初心者のためのCakePHP3 プログラミング入門</a>
 - <a href="http://jquery.com/download/" target="_blank">jQueryダウンロード</a>
