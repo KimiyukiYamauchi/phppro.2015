@@ -139,7 +139,7 @@ class PersonsController extends AppController {
 			 */
 			$connection = ConnectionManager::get('default');
 			$query = 'select * from persons where ' . $find;
-			$persons = $connection->query($query)->fetchAll();
+			$persons = $connection->query($query)->fetchAll('assoc');
 			
 	}    
 		//$this->set('msg', null);
