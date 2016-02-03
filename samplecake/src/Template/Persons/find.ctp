@@ -19,12 +19,18 @@
     <tbody>
     <?php foreach ($persons as $person): ?>
         <tr>
-				<td><?= h($person['id']) ?></td>
-				<td><?= h($person['name']) ?></td>
-				<td><?= h($person['age']) ?></td>
-				<td><?= h($person['mail']) ?></td>
+<!--
+            <td><?= h($person->id) ?></td>
+            <td><?= h($person->name) ?></td>
+            <td><?= h($person->age) ?></td>
+            <td><?= h($person->mail) ?></td>
+-->
+					<td><?= h($person['id']) ?></td>
+					<td><?= h($person['name']) ?></td>
+					<td><?= h($person['age']) ?></td>
+					<td><?= h($person['mail']) ?></td>
         </tr>
-		<?php endforeach; ?>
-		</tbody>
+            <?php endforeach; ?>
+            </tbody>
     </table>
 </div>
