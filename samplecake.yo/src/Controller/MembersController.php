@@ -56,9 +56,18 @@ class MembersController extends AppController {
 	}
 	public function delete($id = null)
 	{
-		$person = $this->Members->get($id);
-		if ($this->Members->delete($person)) {
-			return $this->redirect(['action' => 'index']);
+		$this->request->allowMethod(['post', 'delete']);
+		$member = $this->Members->get($id);
+		try{
+			if ($this->Members->delete($member)) {
+				$this->Flash->success(__('The member has been deleted.'));
+			} else {
+				$this->Flash->error(__('The member could not be deleted. Please, try again.'));
+			}
+		}catch(Exception $e){
+			$this->Flash->error(__('The member could not be deleted. Please, try again.'));
 		}
+
+		return $this->redirect(['action' => 'index']);
 	}
 }

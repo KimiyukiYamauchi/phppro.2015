@@ -27,7 +27,8 @@ class MembersTable extends Table
 	{
 		$validator
 							->add('id', 'valid', ['rule' => 'numeric'])
-							->allowEmpty('id', 'create');
+							->allowEmpty('id', 'create')
+							->add($rules->existsIn('members_id', 'messages'));
 											 
 		$validator
 							->requirePresence('name', 'create')
