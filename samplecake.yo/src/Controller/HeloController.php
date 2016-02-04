@@ -4,6 +4,14 @@ namespace App\Controller;
 use App\Controller\AppController;
 
 class HeloController extends AppController {
+	public function initialize()
+	{
+		parent::initialize();
+		//$this->viewBuilder()->layout('sample');
+		$this->viewBuilder()->layout('default');
+		$this->set('header', '* this is sample site *');
+		$this->set('footer', 'copyright 2015 libro.');
+	}
 	public function index(){
 		//$this->set('message', 'Hello! this is sample page.:-)');
 		$str = $this->request->data('text1');
