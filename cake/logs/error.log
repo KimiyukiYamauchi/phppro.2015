@@ -1,0 +1,296 @@
+2016-01-03 08:31:47 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 08:37:14 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 08:59:05 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:02:28 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:02:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Bugers could not be found.
+Exception Attributes: array (
+  'class' => 'Bugers',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cake/bugers
+Stack Trace:
+#0 /home/yamauchi/www/cake/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-01-03 10:04:30 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:04:30 Error: Fatal Error (1): Class 'App\Controller\App\Controller' not found in [/home/yamauchi/www/cake/src/Controller/BugersController.php, line 6]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-01-03 10:04:31 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\App\Controller' not found
+Request URL: /cake/bugers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', '/home/yamauchi/...', 6)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-03 10:06:16 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:06:17 Error: [Cake\View\Exception\MissingTemplateException] Template file "Bugers/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Bugers/index.ctp',
+)
+Request URL: /cake/bugers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/View/View.php(576): Cake\View\View->_getViewFileName(NULL)
+#1 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Controller/Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\BugersController))
+#4 /home/yamauchi/www/cake/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-03 10:08:55 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:08:55 Error: Fatal Error (1): Call to a member function find() on boolean in [/home/yamauchi/www/cake/src/Controller/BugersController.php, line 8]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-01-03 10:08:55 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /cake/bugers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/home/yamauchi/...', 8)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-03 10:12:39 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:16:30 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:16:30 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Bugers could not be found.
+Exception Attributes: array (
+  'class' => 'Bugers',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cake/bugers
+Stack Trace:
+#0 /home/yamauchi/www/cake/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-01-03 10:16:44 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:16:44 Error: Fatal Error (1): Call to a member function find() on boolean in [/home/yamauchi/www/cake/src/Controller/BurgersController.php, line 8]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-01-03 10:16:44 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /cake/burgers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/home/yamauchi/...', 8)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-03 10:16:55 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:16:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Burger could not be found.
+Exception Attributes: array (
+  'class' => 'Burger',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cake/burger
+Stack Trace:
+#0 /home/yamauchi/www/cake/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-01-03 10:17:03 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:17:03 Error: Fatal Error (1): Call to a member function find() on boolean in [/home/yamauchi/www/cake/src/Controller/BurgersController.php, line 8]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-01-03 10:17:03 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /cake/burgers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/home/yamauchi/...', 8)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-03 10:26:00 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:26:00 Error: Fatal Error (1): Call to a member function find() on boolean in [/home/yamauchi/www/cake/src/Controller/BurgersController.php, line 8]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-01-03 10:26:00 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /cake/burgers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/home/yamauchi/...', 8)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-03 10:39:12 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:39:13 Error: [Cake\View\Exception\MissingTemplateException] Template file "Burgers/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Burgers/index.ctp',
+)
+Request URL: /cake/burgers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/View/View.php(576): Cake\View\View->_getViewFileName(NULL)
+#1 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Controller/Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\BurgersController))
+#4 /home/yamauchi/www/cake/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-03 10:57:07 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:57:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Burgers/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Burgers/index.ctp',
+)
+Request URL: /cake/burgers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/View/View.php(576): Cake\View\View->_getViewFileName(NULL)
+#1 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Controller/Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\BurgersController))
+#4 /home/yamauchi/www/cake/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-03 10:58:07 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:58:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Burgers/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Burgers/index.ctp',
+)
+Request URL: /cake/burgers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/View/View.php(576): Cake\View\View->_getViewFileName(NULL)
+#1 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Controller/Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\BurgersController))
+#4 /home/yamauchi/www/cake/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-03 10:59:57 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 10:59:57 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/yamauchi/www/cake/src/Template/Burgers/index.ctp, line 6]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+include - APP/Template/Burgers/index.ctp, line 6
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 984
+Cake\View\View::_render() - CORE/src/View/View.php, line 944
+Cake\View\View::render() - CORE/src/View/View.php, line 579
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-01-03 11:00:50 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:00:51 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/yamauchi/www/cake/src/Template/Burgers/index.ctp, line 6]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+include - APP/Template/Burgers/index.ctp, line 6
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 984
+Cake\View\View::_render() - CORE/src/View/View.php, line 944
+Cake\View\View::render() - CORE/src/View/View.php, line 579
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-01-03 11:03:29 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:03:29 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/yamauchi/www/cake/src/Template/Burgers/index.ctp, line 6]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+include - APP/Template/Burgers/index.ctp, line 6
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 984
+Cake\View\View::_render() - CORE/src/View/View.php, line 944
+Cake\View\View::render() - CORE/src/View/View.php, line 579
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-01-03 11:11:19 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:11:19 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/yamauchi/www/cake/src/Template/Burgers/index.ctp, line 6]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 140
+include - APP/Template/Burgers/index.ctp, line 6
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 984
+Cake\View\View::_render() - CORE/src/View/View.php, line 944
+Cake\View\View::render() - CORE/src/View/View.php, line 579
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-01-03 11:16:29 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:17:29 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:21:21 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:22:58 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:24:54 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:26:12 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:26:38 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 11:35:00 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 14:32:51 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 14:34:24 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-03 14:34:24 Error: Fatal Error (1): Class 'Debugger' not found in [/home/yamauchi/www/cake/src/Template/Burgers/index.ctp, line 15]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2016-01-03 14:34:24 Error: [Cake\Error\FatalErrorException] Class 'Debugger' not found
+Request URL: /cake/burgers
+Stack Trace:
+#0 /home/yamauchi/www/cake/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Debugger...', '/home/yamauchi/...', 15)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-03 14:46:15 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-05 13:20:32 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-05 13:20:45 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-05 13:20:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Buger could not be found.
+Exception Attributes: array (
+  'class' => 'Buger',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cake/buger
+Stack Trace:
+#0 /home/yamauchi/www/cake/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-01-05 13:20:51 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-05 13:51:00 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2016-01-12 05:37:00 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
