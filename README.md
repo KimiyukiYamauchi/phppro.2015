@@ -76,7 +76,7 @@ extension=intl.so
 $ sudo aptitude install curl
 1. あとは以下の関連リンクの手順に従ってインストール
 
-## TomeMeをCakePHP 3に移行する手順
+## ToneMeをCakePHP 3に移行する手順
 
 1. プロジェクト作成(cake)
 1. tunesテーブルのModel、View(テンプレート)、Controller作成
