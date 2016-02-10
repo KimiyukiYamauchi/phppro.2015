@@ -5,12 +5,17 @@ use App\Controller\AppController;
  
 class HeloController extends AppController
 {
+	public function initialize()
+	{
+		parent::initialize();
+		$this->viewBuilder()->layout('sample');
+		$this->set('header', '* this is sample site *');
+		$this->set('footer', 'copyright 2015 libro.');
+	}
+
 	public function index($a = '')
 	{
-		$str = $this->request->data('text1');
-		$msg = 'typed: ' . $str;
-		if ($str == null) 
-			{ $msg = "please type..."; }
+		$msg = "これは、サンプルアクションです。";
 		$this->set('message', $msg);
 	}
 }
