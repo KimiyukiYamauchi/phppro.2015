@@ -79,6 +79,7 @@ $ sudo aptitude install curl
 ## ToneMeをCakePHP 3に移行する手順
 
 1. プロジェクト作成(cake)
+1. データベースの接続設定
 1. tunesテーブルのModel、View(テンプレート)、Controller作成
 1. feelingsテーブルのModel作成
 1. artistsテーブルのModel作成
