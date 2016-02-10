@@ -76,6 +76,19 @@ extension=intl.so
 $ sudo aptitude install curl
 1. あとは以下の関連リンクの手順に従ってインストール
 
+## ToneMeをCakePHP 3に移行する手順
+
+1. プロジェクト作成(cake)
+1. tunesテーブルのModel、View(テンプレート)、Controller作成
+1. feelingsテーブルのModel作成
+1. artistsテーブルのModel作成
+1. css/imgフォルダ　追加
+1. cake/src/Template/Layout/toneme.ctp 追加/修正
+1. 検索機能
+	1. cake/src/Template/Layout/Tunes/search.ctp　追加/修正
+	1. cake/src/Template/Layout/Controller/ TunesController.php 修正
+1. ...
+
 ## 関連リンク
 
 - <a href="http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html" target="_blank">郵便番号データダウンロード</a>
