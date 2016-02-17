@@ -83,12 +83,18 @@ $ sudo aptitude install curl
 1. tunesテーブルのModel、View(テンプレート)、Controller作成
 1. feelingsテーブルのModel作成
 1. artistsテーブルのModel作成
-1. css/imgフォルダ　追加
-1. cake/src/Template/Layout/toneme.ctp 追加/修正
+1. レイアウトとスタイルシートの適用
+	1. css/imgフォルダ　追加
+	1. cake/src/Template/Layout/Controller/ TunesController.php 修正
+	1. cake/src/Template/Layout/toneme.ctp 追加/修正
+	1. 動作確認
 1. 検索機能
 	1. cake/src/Template/Layout/Tunes/search.ctp　追加/修正
 	1. cake/src/Template/Layout/Controller/ TunesController.php 修正
-1. ...
+1. 追加機能
+1. 編集機能
+1. 削除機能
+1. キモチ曲検索機能
 
 ## 関連リンク
 
