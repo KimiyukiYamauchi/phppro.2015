@@ -104,8 +104,8 @@ class TunesController extends AppController
         if ($this->request->is('post')) {
             $tune = $this->Tunes->patchEntity($tune, $this->request->data);
             if ($this->Tunes->save($tune)) {
-                $this->Flash->success(__('The tune has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                $this->Flash->success(__('追加しました'));
+                return $this->redirect(['action' => 'search']);
             } else {
                 $this->Flash->error(__('The tune could not be saved. Please, try again.'));
             }
@@ -131,8 +131,8 @@ class TunesController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $tune = $this->Tunes->patchEntity($tune, $this->request->data);
             if ($this->Tunes->save($tune)) {
-                $this->Flash->success(__('The tune has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                $this->Flash->success(__('保存しました'));
+                return $this->redirect(['action' => 'search']);
             } else {
                 $this->Flash->error(__('The tune could not be saved. Please, try again.'));
             }
@@ -152,13 +152,13 @@ class TunesController extends AppController
      */
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
-        $tune = $this->Tunes->get($id);
-        if ($this->Tunes->delete($tune)) {
-            $this->Flash->success(__('The tune has been deleted.'));
-        } else {
-            $this->Flash->error(__('The tune could not be deleted. Please, try again.'));
-        }
-        return $this->redirect(['action' => 'index']);
+			$this->request->allowMethod(['post', 'delete']);
+			$tune = $this->Tunes->get($id);
+			if ($this->Tunes->delete($tune)) {
+				$this->Flash->success(__('削除しました'));
+			} else {
+				$this->Flash->error(__('The tune could not be deleted. Please, try again.'));
+			}
+			return $this->redirect(['action' => 'search']);
     }
 }

@@ -37,7 +37,7 @@ echo $this->Form->end();
                 <td><?= $tune->has('comcont') ?  __('あり') : __('なし') ?></td>
                 <td>
                     <?= $this->Html->link(__('編集'), ['action' => 'edit', $tune->id]) ?>
-                    <?= $this->Form->postLink(__('削除'), ['action' => 'delete', $tune->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tune->id)]) ?>
+                    <?= $this->Form->postLink(__('削除'), ['action' => 'delete', $tune->id], ['confirm' => __('この曲を削除します、よろしいですか # {0}?', $tune->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

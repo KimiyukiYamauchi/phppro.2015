@@ -1,24 +1,17 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Tunes'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Artists'), ['controller' => 'Artists', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Artist'), ['controller' => 'Artists', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Feelings'), ['controller' => 'Feelings', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Feeling'), ['controller' => 'Feelings', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
+<div id="navdiv">
+<form class="formnav" method="post" action="/cake/users/logout">
+<input type="submit" value="ログアウト">
+</form>
+</div>
+<h2>曲の追加</h2>
 <div class="tunes form large-9 medium-8 columns content">
-    <?= $this->Form->create($tune) ?>
-    <fieldset>
-        <legend><?= __('Add Tune') ?></legend>
-        <?php
-            echo $this->Form->input('name');
-            echo $this->Form->input('artist_id', ['options' => $artists]);
-            echo $this->Form->input('feeling_id', ['options' => $feelings]);
-            echo $this->Form->input('comcont');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<?= $this->Form->create($tune) ?>
+<?php
+		echo $this->Form->input('name', ['label' => '曲名', 'size' => 30, 'maxlength' => 20]);
+		echo $this->Form->input('artist_id', ['options' => $artists, 'label' => 'アーティスト']);
+		echo $this->Form->input('feeling_id', ['options' => $feelings, 'label' => '気持ち']);
+		echo $this->Form->input('comcont', ['label' => 'コメント', 'cols' => 30, 'rows' => 3]);
+?>
+<?= $this->Form->button(__('追加')) ?>
+<?= $this->Form->end() ?>
 </div>
