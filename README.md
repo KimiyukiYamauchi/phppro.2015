@@ -85,24 +85,29 @@ $ sudo aptitude install curl
 1. artistsテーブルのModel作成
 1. レイアウトとスタイルシートの適用
 	1. css/imgフォルダ　追加
-	1. cake/src/Template/Layout/Controller/TunesController.php 修正
+	1. cake/src/Controller/TunesController.php 修正
 	1. cake/src/Template/Layout/toneme.ctp 追加/修正
 	1. 動作確認
 1. 検索機能
-	1. cake/src/Template/Layout/Tunes/search.ctp　追加/修正
-	1. cake/src/Template/Layout/Controller/TunesController.php 修正
+	1. cake/src/Template/Tunes/search.ctp　追加/修正
+	1. cake/src/Controller/TunesController.php 修正
 1. 追加機能
-	1. cake/src/Template/Layout/Tunes/add.ctp　修正
-	1. cake/src/Template/Layout/Controller/TunesController.php 修正
+	1. cake/src/Template/Tunes/add.ctp　修正
+	1. cake/src/Controller/TunesController.php 修正
 1. 編集機能
-	1. cake/src/Template/Layout/Tunes/edit.ctp　修正
-	1. cake/src/Template/Layout/Controller/TunesController.php 修正
+	1. cake/src/Template/Tunes/edit.ctp　修正
+	1. cake/src/Controller/TunesController.php 修正
 1. 削除機能
-	1. 修正不要
+	1. cake/src/Controller/TunesController.php 修正
 1. キモチ曲検索機能
-	1. cake/src/Template/Layout/Tunes/index.ctp　修正
-	1. cake/src/Template/Layout/Controller/TunesController.php 修正
+	1. cake/src/Template/Tunes/index.ctp　修正
+	1. cake/src/Controller/TunesController.php 修正
+	1. cake/src/Model/Table/TunesTable.php
 1. ログイン認証機能
+	1. usersテーブルのModel、View(テンプレート)、Controller作成
+	1. 以下の手順に従って認証機能を追加
+		- <a href="http://book.cakephp.org/3.0/en/tutorials-and-examples/blog-auth-example/auth.html" target="_blank">Blog Tutorial - Authentication and Authorization</a>
+		- <a href="http://jmatsuzaki.com/archives/16505" target="_blank">CakePHP3.xでのAuthコンポーネントの使い方</a>
 1. バリデーション機能
 
 ## 関連リンク
