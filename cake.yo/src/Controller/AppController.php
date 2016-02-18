@@ -43,7 +43,22 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+				$this->loadComponent('Auth', [
+								'loginRedirect' => [
+									'controller' => 'Tunes',
+									'action' => 'search'
+								],
+								'logoutRedirect' => [
+									'controller' => 'Users',
+									'action' => 'login'
+								]
+							]);
     }
+
+		public function beforeFilter(Event $event)
+		{
+			$this->Auth->allow(['index', 'view', 'display']);
+		}
 
     /**
      * Before render callback.
