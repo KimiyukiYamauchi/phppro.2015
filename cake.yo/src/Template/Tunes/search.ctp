@@ -1,5 +1,5 @@
 <div id="navdiv">
-<form class="formnav" method="post" action="/cake/users/logout">
+<form class="formnav" method="post" action="/cake.yo/users/logout">
 <input type="submit" value="ログアウト">
 </form>
 </div>
