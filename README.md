@@ -98,7 +98,7 @@ $ sudo aptitude install curl
 	1. cake/src/Template/Layout/Tunes/edit.ctp　修正
 	1. cake/src/Template/Layout/Controller/TunesController.php 修正
 1. 削除機能
-	1. cake/src/Template/Layout/Controller/TunesController.php 修正
+	1. 修正不要
 1. キモチ曲検索機能
 	1. cake/src/Template/Layout/Tunes/index.ctp　修正
 	1. cake/src/Template/Layout/Controller/TunesController.php 修正
