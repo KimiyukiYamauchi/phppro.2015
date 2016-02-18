@@ -77,4 +77,36 @@ class TunesTable extends Table
         $rules->add($rules->existsIn(['feeling_id'], 'Feelings'));
         return $rules;
     }
+
+		function findFeeling($feelId = null) {
+			if($feelId < 1 || $feelId > 6){
+				return NULL;
+			}
+
+			//	気持ちIDに一致する曲データの件数を取得する
+			
+			$query = $this->find();
+			$results = $query->select(['count' => $query->func()->count('*')])
+												->where(['feeling_id' => $feelId])
+												->toArray();
+			//debug($results[0]['count']);
+
+			if($results[0]['count'] <= 0){
+				return NULL;
+			}
+
+			//	ランダムで選択する（たとえば5件なら、1～5の中から1つ選ぶ）
+			$offset = mt_rand(1, $results[0]['count']);
+			$offset -= 1;
+
+			$results = $this->find()
+											->contain(['Artists', 'Feelings'])
+											->select(['Tunes.id', 'Tunes.name', 'Tunes.feeling_id',
+																'Artists.name', 'Feelings.name', 'Tunes.comcont'])
+											->where(['Tunes.feeling_id' => $feelId])
+											->first();
+
+			return $results;
+		}
+
 }

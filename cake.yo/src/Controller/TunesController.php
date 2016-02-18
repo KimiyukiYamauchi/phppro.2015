@@ -67,13 +67,26 @@ class TunesController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Artists', 'Feelings']
-        ];
-        $tunes = $this->paginate($this->Tunes);
+			//debug($this->request->data);
 
-        $this->set(compact('tunes'));
-        $this->set('_serialize', ['tunes']);
+			if(!empty($this->request->data)){
+				$feeling_id = 0;
+				for($idx = 1; $idx <= 6; $idx ++){
+					if(isset($this->request->data['btn' . $idx . '_x'])){
+						$feeling_id = $idx;
+						break;
+					}
+				}
+
+				//debug($feeling_id);
+
+				if($feeling_id >= 1 && $feeling_id <= 6){
+					$result = $this->Tunes->findFeeling($feeling_id);
+					if($result !== null){
+						$this->set('tune', $result);
+					}
+				}
+			}
     }
 
     /**

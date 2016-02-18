@@ -1,49 +1,56 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Tune'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Artists'), ['controller' => 'Artists', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Artist'), ['controller' => 'Artists', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Feelings'), ['controller' => 'Feelings', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Feeling'), ['controller' => 'Feelings', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="tunes index large-9 medium-8 columns content">
-    <h3><?= __('Tunes') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('name') ?></th>
-                <th><?= $this->Paginator->sort('artist_id') ?></th>
-                <th><?= $this->Paginator->sort('feeling_id') ?></th>
-                <th><?= $this->Paginator->sort('modified') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($tunes as $tune): ?>
-            <tr>
-                <td><?= $this->Number->format($tune->id) ?></td>
-                <td><?= h($tune->name) ?></td>
-                <td><?= $tune->has('artist') ? $this->Html->link($tune->artist->name, ['controller' => 'Artists', 'action' => 'view', $tune->artist->id]) : '' ?></td>
-                <td><?= $tune->has('feeling') ? $this->Html->link($tune->feeling->name, ['controller' => 'Feelings', 'action' => 'view', $tune->feeling->id]) : '' ?></td>
-                <td><?= h($tune->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $tune->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $tune->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tune->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tune->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-        </ul>
-        <p><?= $this->Paginator->counter() ?></p>
-    </div>
+<div id="navdiv">
+<form class="formnav" method="post" action="/cake/users/login">
+<input type="submit" value="ログイン">
+</form>
 </div>
+<h2>いまのあなたの<span class="style1">キブン</span>は？</h2>
+<div class="boxbtn">
+<?php
+echo $this->Form->create(); 
+for($idx = 1; $idx <= 6; $idx ++){
+	$bname = 'btn' . $idx;
+	$fname =  $bname . '.png';
+	echo $this->Form->submit($fname, ['name' => $bname, 'div' => false]);
+}
+echo $this->Form->end();
+?>
+</div>
+<?php
+//debug($tune);
+if(isset($tune['feeling_id'])){
+		$feelId = $tune['feeling_id'];
+		//debug($feelId);
+			if($feelId < 1 && $feelId > 6){
+				$feelId = 1;
+			}
+?>
+<h2>いま聞きたい<span class="style1">
+<?php
+			$feels = array('', 'ルンルン', 'ノリノリ', 'ホノボノ', 'ラブラブ', 'ヘロヘロ', 'ガックリ');
+			echo h($feels[$feelId]);
+?>
+</span>な１曲はコレ！</h2>
+<div class="boxbtn">
+<div id="boxface">
+<?php echo $this->Html->image('face' . $feelId . '.png'); ?>
+<?php //debug($tune); ?>
+</div>
+<div id="boxtune">
+<p>
+<?php echo h($tune['name']); ?>
+</p>
+<p id="artname"><span id="artby">&nbsp;by&nbsp;</span>
+<?php echo h($tune['artist']['name']); ?>
+</p>
+</div>
+<?php
+				if(isset($tune['comcont']) && $tune['comcont'] !== ''){
+							echo '<div id="fukit"></div><div id="fukim">';
+							echo nl2br(h($tune->comcont));
+							echo '</div><div id="fukib"></div>';
+				}
+?>
+</div>
+<?php
+			}
+?>
