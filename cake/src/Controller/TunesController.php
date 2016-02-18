@@ -118,4 +118,43 @@ class TunesController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+
+		function search() {
+			$aopts = $this->Tunes->Artists->find('list');
+			$aopts = $aopts->toArray();
+			//debug($aopts);
+			$aopts['0'] = '指定しない';
+			ksort($aopts);
+			$this->set('artists', $aopts);
+
+			$fopts = $this->Tunes->Feelings->find('list');
+			$fopts = $fopts->toArray();
+			$fopts['0'] = '指定しない';
+			ksort($fopts);
+			$this->set('feelings', $fopts);
+
+			$query = $this->Tunes->find()
+				->contain(['Artists', 'Feelings']);
+
+			if(!empty($this->request->data)){
+				if($this->request->data['name'] != ''){
+					$tn = preg_replace('/([_%#])/u', '#$1', $this->request->data['name']);
+					debug($tn);
+					$query = $query->where(["Tunes.name like " => '%' . $tn . '%']);
+				}
+				if(!empty($this->request->data['artist_id'])){
+					$artist_id = $this->request->data['artist_id'];
+					$query = $query->where(['Tunes.artist_id' => $artist_id]);
+				}
+				if(!empty($this->request->data['feeling_id'])){
+					$feeling_id = $this->request->data['feeling_id'];
+					$query = $query->where(['Tunes.feeling_id' => $feeling_id]);
+				}
+			}
+
+			$tunes = $query
+				->order(['Tunes.id' => 'ASC']);
+			
+			$this->set('tunes', $tunes);
+		}
 }
