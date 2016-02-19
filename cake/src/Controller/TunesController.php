@@ -24,13 +24,22 @@ class TunesController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Artists', 'Feelings']
-        ];
-        $tunes = $this->paginate($this->Tunes);
+			if(!empty($this->request->data)){
+				$feeling_id = 0;
+				for($idx = 1; $idx <= 6; $idx ++){
+					if(isset($this->request->data['btn' . $idx . '_x'])){
+						$feeling_id = $idx;
+						break;
+					}
+				}
 
-        $this->set(compact('tunes'));
-        $this->set('_serialize', ['tunes']);
+				if($feeling_id >= 1 && $feeling_id <= 6){
+					$result = $this->Tunes->findFeeling($feeling_id);
+					if($result !== null){
+						$this->set('tune', $result);
+					}
+				}
+			}
     }
 
     /**
@@ -61,8 +70,8 @@ class TunesController extends AppController
         if ($this->request->is('post')) {
             $tune = $this->Tunes->patchEntity($tune, $this->request->data);
             if ($this->Tunes->save($tune)) {
-                $this->Flash->success(__('The tune has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                $this->Flash->success(__('追加しました'));
+                return $this->redirect(['action' => 'search']);
             } else {
                 $this->Flash->error(__('The tune could not be saved. Please, try again.'));
             }
@@ -88,8 +97,8 @@ class TunesController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $tune = $this->Tunes->patchEntity($tune, $this->request->data);
             if ($this->Tunes->save($tune)) {
-                $this->Flash->success(__('The tune has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                $this->Flash->success(__('保存しました'));
+                return $this->redirect(['action' => 'search']);
             } else {
                 $this->Flash->error(__('The tune could not be saved. Please, try again.'));
             }
@@ -112,11 +121,11 @@ class TunesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $tune = $this->Tunes->get($id);
         if ($this->Tunes->delete($tune)) {
-            $this->Flash->success(__('The tune has been deleted.'));
+            $this->Flash->success(__('削除しました'));
         } else {
             $this->Flash->error(__('The tune could not be deleted. Please, try again.'));
         }
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['action' => 'search']);
     }
 
 		function search() {
