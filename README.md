@@ -112,6 +112,9 @@ $ sudo aptitude install curl
 	1. 以下の手順に従ってバリデーション機能を追加
 		- <a href="http://book.cakephp.org/3.0/ja/core-libraries/validation.html" target="_blank">バリデーション</a>
 		- <a href="http://api.cakephp.org/3.0/class-Cake.Validation.Validation.html" target="_blank">Class Validation</a>
+1. CSRF対策処理
+	1. 以下の手順に従ってCSRF対策処理を追加
+		- <a href="http://easyramble.com/csrf-component-with-cakephp.html" target="_blank">CakePHP3でCSRF対策</a>
 
 ## 関連リンク
 
