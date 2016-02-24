@@ -109,6 +109,8 @@ $ sudo aptitude install curl
 		- <a href="http://book.cakephp.org/3.0/en/tutorials-and-examples/blog-auth-example/auth.html" target="_blank">Blog Tutorial - Authentication and Authorization</a>
 		- <a href="http://jmatsuzaki.com/archives/16505" target="_blank">CakePHP3.xでのAuthコンポーネントの使い方</a>
 1. バリデーション機能
+	1. 以下の手順に従ってバリデーション機能を追加
+		- <a href="http://book.cakephp.org/3.0/en/orm/validation.html" target="_blank">Validating Data</a>
 
 ## 関連リンク
 
