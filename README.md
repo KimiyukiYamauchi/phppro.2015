@@ -110,7 +110,8 @@ $ sudo aptitude install curl
 		- <a href="http://jmatsuzaki.com/archives/16505" target="_blank">CakePHP3.xでのAuthコンポーネントの使い方</a>
 1. バリデーション機能
 	1. 以下の手順に従ってバリデーション機能を追加
-		- <a href="http://book.cakephp.org/3.0/en/orm/validation.html" target="_blank">Validating Data</a>
+		- <a href="http://book.cakephp.org/3.0/ja/core-libraries/validation.html" target="_blank">バリデーション</a>
+		- <a href="http://api.cakephp.org/3.0/class-Cake.Validation.Validation.html" target="_blank">Class Validation</a>
 
 ## 関連リンク
 
