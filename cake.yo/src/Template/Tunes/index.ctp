@@ -1,5 +1,5 @@
 <div id="navdiv">
-<form class="formnav" method="post" action="/cake/users/login">
+<form class="formnav" method="post" action="/cake.yo/users/login">
 <input type="submit" value="ログイン">
 </form>
 </div>
