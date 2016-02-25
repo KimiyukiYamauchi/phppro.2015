@@ -73,7 +73,7 @@ class TunesController extends AppController
                 $this->Flash->success(__('追加しました'));
                 return $this->redirect(['action' => 'search']);
             } else {
-                $this->Flash->error(__('The tune could not be saved. Please, try again.'));
+                $this->Flash->error(__('追加できませんでした'));
             }
         }
         $artists = $this->Tunes->Artists->find('list', ['limit' => 200]);

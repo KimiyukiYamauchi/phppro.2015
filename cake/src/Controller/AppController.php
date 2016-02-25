@@ -56,6 +56,9 @@ class AppController extends Controller
 						'authError' => 'ログインしてください',
 															]
 														);
+
+				//$this->loadComponent('Csrf');
+
     }
 
 		public function beforeFilter(Event $event)

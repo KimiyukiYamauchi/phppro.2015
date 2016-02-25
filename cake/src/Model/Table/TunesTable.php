@@ -58,8 +58,24 @@ class TunesTable extends Table
             ->requirePresence('name', 'create')
             ->notEmpty('name');
 
+				$validator
+						->add('name', 'length', ['rule' => ['lengthBetween', 1, 20],
+																		'message' => '曲名は20文字以内で入力して下さい']);
+
+				$validator
+						->add('artist_id', 'range', ['rule' => ['range', 0, 100],
+																		'message' => 'アーティストを選択して下さい']);
+
+				$validator
+						->add('feeling_id', 'range', ['rule' => ['range', 0, 100],
+																		'message' => '気持ちを選択して下さい']);
+
         $validator
             ->allowEmpty('comcont');
+
+				$validator
+						->add('comcont', 'maxlen', ['rule' => ['maxLength', 30],
+																		'message' => 'コメントは 30 文字以内で入力して下さい']);
 
         return $validator;
     }
