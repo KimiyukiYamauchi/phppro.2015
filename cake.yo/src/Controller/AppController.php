@@ -53,7 +53,7 @@ class AppController extends Controller
 									'action' => 'login'
 								]
 							]);
-				$this->loadComponent('Csrf');
+//				$this->loadComponent('Csrf');
     }
 
 		public function beforeFilter(Event $event)

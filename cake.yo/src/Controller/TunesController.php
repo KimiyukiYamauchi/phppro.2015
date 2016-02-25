@@ -113,6 +113,7 @@ class TunesController extends AppController
      */
     public function add()
     {
+//			debug($this->request->data);
         $tune = $this->Tunes->newEntity();
         if ($this->request->is('post')) {
             $tune = $this->Tunes->patchEntity($tune, $this->request->data);
@@ -120,7 +121,7 @@ class TunesController extends AppController
                 $this->Flash->success(__('追加しました'));
                 return $this->redirect(['action' => 'search']);
             } else {
-                $this->Flash->error(__('The tune could not be saved. Please, try again.'));
+                $this->Flash->error(__('保存に失敗しました'));
             }
         }
         $artists = $this->Tunes->Artists->find('list', ['limit' => 200]);

@@ -52,6 +52,7 @@ class AppController extends Controller
 																	'controller' => 'Users',
 																	'action' => 'login'
 																],
+						//'loginError' => 'ログインに失敗しました',
 						'authError' => 'ログインしてください',
 															]
 														);
